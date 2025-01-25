@@ -1,23 +1,9 @@
 import { Text, Title } from '@mantine/core';
 import classes from './Welcome.module.css';
-import { useEffect, useState } from 'react';
-import { onAuthStateChanged } from 'firebase/auth';
-import { auth } from '@/firebaseConfig';
+import { useAuth } from '@/contexts/AuthContext/AuthContext';
 
 export function Welcome() {
-  const [userName, setUserName] = useState<string | null>(null);
-
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      if (user) {
-        setUserName(user.displayName);
-      } else {
-        setUserName(null);
-      }
-    });
-
-    return () => unsubscribe();
-  }, []);
+    const { userName } = useAuth();
 
   return (
     <>
