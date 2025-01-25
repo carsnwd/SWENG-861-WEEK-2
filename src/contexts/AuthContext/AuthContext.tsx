@@ -14,7 +14,8 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
-        setUserName(user.displayName);
+        const displayName = user.displayName || user.providerData[0]?.displayName || user.providerData[0]?.uid;
+        setUserName(displayName);
       } else {
         setUserName(null);
       }
