@@ -1,14 +1,22 @@
-# Mantine Vite template
+# SWENG-862 Week 2 Assignment - Carson Wood
 
-## Features
+## Video demonstration
+[https://youtu.be/iyly_XDxlMo]
 
-This template comes with the following features:
+## To Acces the Deployed App
+The app is serving remotely at [https://sweng-862-week-2.web.app/]
 
-- [PostCSS](https://postcss.org/) with [mantine-postcss-preset](https://mantine.dev/styles/postcss-preset)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Storybook](https://storybook.js.org/)
-- [Vitest](https://vitest.dev/) setup with [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
-- ESLint setup with [eslint-config-mantine](https://github.com/mantinedev/eslint-config-mantine)
+## To Run the Application Locally
+* Run `npm i` 
+* Run `npm dev`
+* The app should now be running on localhost.
+
+## To Deploy the App
+* You need my Google credentials with Firebase to do this.
+* `npm install -g firebase-tools`
+* `firebase login` with my credentials
+* `npm run build`
+* `firebase deploy`
 
 ## npm scripts
 
